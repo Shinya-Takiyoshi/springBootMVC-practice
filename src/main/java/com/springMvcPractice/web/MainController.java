@@ -1,4 +1,4 @@
-package com.example.springMvcPractice.web;
+package com.springMvcPractice.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
