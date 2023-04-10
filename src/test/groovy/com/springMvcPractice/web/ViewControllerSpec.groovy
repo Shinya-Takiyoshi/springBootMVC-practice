@@ -1,15 +1,16 @@
 package com.springMvcPractice.web
 
+import com.springMvcPractice.presentation.controller.ViewController
 import org.springframework.ui.Model
 import spock.lang.Specification
 
-class MainControllerSpec extends Specification {
+class ViewControllerSpec extends Specification {
     def "Index"() {
         given:
-        MainController mainController = new MainController()
+        ViewController viewController = new ViewController()
         Model model = Mock(Model)
         model.addAttribute("test","こんにちは")
         expect:
-        mainController.index(model) == "こんにちは"
+        viewController.index(model) == "こんにちは"
     }
 }
