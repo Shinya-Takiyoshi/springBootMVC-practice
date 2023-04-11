@@ -9,7 +9,7 @@ class ViewControllerSpec extends Specification {
         given:
         ViewController viewController = new ViewController()
         Model model = Mock(Model)
-        model.addAttribute("test","こんにちは")
+        model.addAttribute("test", "こんにちは")
         expect:
         viewController.index(model) == "こんにちは"
     }
