@@ -1,2 +1,5 @@
 # springBootMVC-practice
 springBoot-practice
+
+controllerAdviceという前処理時に@modelAttributeする
+その後にcontrollerで@modelAttributeで受け取る
