@@ -13,13 +13,15 @@
 <div th:each="drill:${drillList}">
     <table>
         <tr>
-            <th id="operand" th:text="${drill.getOperand()}" th:value="${drill.getOperand()}"></th>
+            <th th:id="operand+${drillStat.count}" th:text="${drill.getOperand()}"
+                th:value="${drill.getOperand()}"></th>
             <!-- Statはth:eachのデフォルトステータス変数-->
-            <td><input type="text" id="answerInput" th:text="${drill.getAnswerInput()}"
+            <td><input type="text" th:id="answerInput+${drillStat.count}" th:text="${drill.getAnswerInput()}"
                        th:value="${drill.getAnswerInput()}"/>
             </td>
-            <td><input type="submit" value="計算結果" onclick="answerRequest()"/></td>
-            <td><p id="judge"></p></td>
+            <td><input type="submit" id="" value="計算結果" th:onclick="|answerRequest('__${drillStat.count}__')|"/>
+            </td>
+            <td><p th:id="judge+${drillStat.count}"></p></td>
         </tr>
     </table>
 </div>

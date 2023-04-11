@@ -1,4 +1,4 @@
-function answerRequest(){
+function answerRequest(target){
     if($('#answerInput').val() === null){
         return
     }
@@ -8,12 +8,12 @@ function answerRequest(){
      cache: false,
      dataType: "json",
      data: {
-       operand: $('#operand').val(),
-       answerInput: $('#answerInput').val()
+       operand: $('#operand' + target).val(),
+       answerInput: $('#answerInput' + target).val()
      },
      success: function(o){
         //form要素はval()だが、pタグなどはtext()
-       $('#judge').text("正解!")
+       $('#judge' + target).text("正解!")
      },
      error: function(xhr, textStatus, errorThrown){
         console.log(errorThrown)
