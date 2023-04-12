@@ -2,6 +2,7 @@ package com.springMvcPractice.presentation.controller;
 
 import com.springMvcPractice.application.service.CreateDrillService;
 import com.springMvcPractice.domain.model.Drill;
+import lombok.NonNull;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +15,8 @@ public class ViewController {
     // RequestParamは、デフォルトがrequired = trueなので任意の場合は明示的に指定する。
     // defaultValueは指定なしの場合の値を設定できるので初期設定として利用する。
     @GetMapping("/")
-    public String index(@RequestParam(required = false, defaultValue = "0") final int plusCnt,
-                        @RequestParam(required = false, defaultValue = "0") final int minusCnt,
+    public String index(@RequestParam(required = false, defaultValue = "0") @NonNull final int plusCnt,
+                        @RequestParam(required = false, defaultValue = "0") @NonNull final int minusCnt,
                         final Model model) {
         //計算ドリル情報
         CreateDrillService createDrillService = new CreateDrillService();
