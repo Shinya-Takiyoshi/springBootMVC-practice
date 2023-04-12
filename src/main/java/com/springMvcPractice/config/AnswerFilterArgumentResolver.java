@@ -8,6 +8,8 @@ import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 
+import java.util.Objects;
+
 /**
  * タイミング:リクエストの引数としてもらった時点で処理される
  * 参考:
@@ -23,8 +25,7 @@ public class AnswerFilterArgumentResolver implements HandlerMethodArgumentResolv
     @Override
     public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
         String operand = webRequest.getParameter("operand");
-        Integer answerInput = Integer.parseInt(webRequest.getParameter("answerInput"));
-        Drill drill = new Drill(operand, answerInput);
-        return drill;
+        Integer answerInput = Integer.parseInt(Objects.requireNonNull(webRequest.getParameter("answerInput")));
+        return new Drill(operand, answerInput);
     }
 }
