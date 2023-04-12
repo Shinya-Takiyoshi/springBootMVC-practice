@@ -11,7 +11,6 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 @Getter
 public class Drill {
-
     private final String operand;
     private Integer answerInput;
 }

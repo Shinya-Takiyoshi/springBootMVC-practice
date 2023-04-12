@@ -1,5 +1,5 @@
 function answerRequest(target){
-    if($('#answerInput').val() === null){
+    if($('#answerInput'+ target).val() === null){
         return
     }
    $.ajax({
@@ -8,12 +8,18 @@ function answerRequest(target){
      cache: false,
      dataType: "json",
      data: {
-       operand: $('#operand' + target).val(),
+       operand: $('#operand' + target).text(),
        answerInput: $('#answerInput' + target).val()
      },
-     success: function(o){
+     success: function(data){
         //form要素はval()だが、pタグなどはtext()
-       $('#judge' + target).text("正解!")
+       if (data.judge) {
+        $('#judge' + target).text("正解!")
+        $('#judge' + target).css("color","black")
+       } else {
+        $('#judge' + target).text("不正解")
+        $('#judge' + target).css("color","red")
+       }
      },
      error: function(xhr, textStatus, errorThrown){
         console.log(errorThrown)

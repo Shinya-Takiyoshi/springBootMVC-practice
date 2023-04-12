@@ -1,8 +1,6 @@
-package com.springMvcPractice.domain.model;
+package com.springMvcPractice.application.service;
 
-import com.springMvcPractice.application.service.DrillService;
-import com.springMvcPractice.application.service.MinusDrillService;
-import com.springMvcPractice.application.service.PlusDrillService;
+import com.springMvcPractice.domain.model.Drill;
 
 import java.util.*;
 import java.util.stream.Collectors;

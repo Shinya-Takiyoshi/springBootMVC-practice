@@ -1,6 +1,6 @@
 package com.springMvcPractice.presentation.controller;
 
-import com.springMvcPractice.domain.model.CreateDrillService;
+import com.springMvcPractice.application.service.CreateDrillService;
 import com.springMvcPractice.domain.model.Drill;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

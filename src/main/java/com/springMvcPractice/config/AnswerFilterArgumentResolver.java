@@ -1,5 +1,6 @@
 package com.springMvcPractice.config;
 
+import com.springMvcPractice.domain.model.Drill;
 import com.springMvcPractice.presentation.annotation.AnswerFilter;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.bind.support.WebDataBinderFactory;
@@ -7,14 +8,21 @@ import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 
-public class ArgumentResolver implements HandlerMethodArgumentResolver {
+/**
+ * タイミング:リクエストの引数としてもらった時点で処理される
+ **/
+public class AnswerFilterArgumentResolver implements HandlerMethodArgumentResolver {
     @Override
     public boolean supportsParameter(MethodParameter parameter) {
+        System.out.println("supportsParameter通過");
         return parameter.hasParameterAnnotation(AnswerFilter.class);
     }
 
     @Override
     public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
-        return null;
+        String operand = webRequest.getParameter("operand");
+        Integer answerInput = Integer.parseInt(webRequest.getParameter("answerInput"));
+        Drill drill = new Drill(operand, answerInput);
+        return drill;
     }
 }
