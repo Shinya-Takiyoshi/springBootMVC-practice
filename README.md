@@ -11,3 +11,5 @@ controllerAdviceという前処理時に@modelAttributeする
       jsファイルの配置場所など
 ### ・constratcorアノテーションの使い分け
 ### ControllerAdvice,HandlerMethodArgumentResolverの処理する順番
+### ExceptionHandlerの実装
+### 自前のユーティリティオプジェクト作成
