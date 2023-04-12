@@ -6,6 +6,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.List;
 
+/**
+ * 参考：
+ * https://qiita.com/yukina-ge/items/98ba5393bcde4df599d5
+ * **/
 @Configuration
 public class MyWebMvcConfigure implements WebMvcConfigurer {
     @Override

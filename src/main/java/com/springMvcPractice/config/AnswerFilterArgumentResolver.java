@@ -10,6 +10,8 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 
 /**
  * タイミング:リクエストの引数としてもらった時点で処理される
+ * 参考:
+ * https://qiita.com/rubytomato@github/items/37d58c2748c9f0a8566a
  **/
 public class AnswerFilterArgumentResolver implements HandlerMethodArgumentResolver {
     @Override

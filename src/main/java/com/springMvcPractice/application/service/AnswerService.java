@@ -6,6 +6,10 @@ import lombok.experimental.NonFinal;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 
+/**
+ * 文字列式計算ライブラリ参考:
+ * https://salumarine.com/how-to-evaluate-mathematical-expression-string-in-java/
+ * **/
 public class AnswerService {
     /**
      * 回答結果情報を確認して、◯×を判定する
