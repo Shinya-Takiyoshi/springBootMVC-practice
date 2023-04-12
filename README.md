@@ -10,6 +10,6 @@ controllerAdviceという前処理時に@modelAttributeする
 ### ・thymeleafの外部ファイル読み込みお作法
       jsファイルの配置場所など
 ### ・constratcorアノテーションの使い分け
-### ControllerAdvice,HandlerMethodArgumentResolverの処理する順番
-### ExceptionHandlerの実装
-### 自前のユーティリティオプジェクト作成
+### ・ControllerAdvice,HandlerMethodArgumentResolverの処理する順番
+### ・ExceptionHandlerの実装
+### ・自前のユーティリティオプジェクト作成
