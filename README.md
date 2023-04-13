@@ -15,3 +15,4 @@ controllerAdviceという前処理時に@modelAttributeする
 ### ・自前のユーティリティオプジェクト作成
 ### ・HandlerInterceptorの処理順確認
 ### HandlerIntercepterで引数になっているModelAndViewには設定したmodelオブジェクトと、controllerでreturnしたviewNameが設定されている
+### intelijの機能で、コードの整形とインポート最適化は最後に実施でインデントずれや、不要なインポートの削除をする
