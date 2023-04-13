@@ -13,4 +13,5 @@ controllerAdviceという前処理時に@modelAttributeする
 ### ・ControllerAdvice,HandlerMethodArgumentResolverの処理する順番
 ### ・ExceptionHandlerの実装
 ### ・自前のユーティリティオプジェクト作成
+### ・HandlerInterceptorの処理順確認
 ### HandlerIntercepterで引数になっているModelAndViewには設定したmodelオブジェクトと、controllerでreturnしたviewNameが設定されている
