@@ -18,13 +18,13 @@ public class ControllerInterceptor implements HandlerInterceptor {
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         System.out.println("postHandle");
-        System.out.println("requestUrl:" + requestUrlOfString(request));
+        System.out.println("ResponseStatus:" + response.getStatus());
     }
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
         System.out.println("afterCompletion");
-        System.out.println("requestUrl:" + requestUrlOfString(request));
+        System.out.println("CompletedUrl:" + requestUrlOfString(request));
     }
 
     private String requestUrlOfString(HttpServletRequest req) {
