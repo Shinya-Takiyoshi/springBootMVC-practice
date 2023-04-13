@@ -13,4 +13,8 @@ import lombok.RequiredArgsConstructor;
 public class Drill {
     private final String operand;
     private Integer answerInput;
+
+    public String displayOperand() {
+        return getOperand() + " =";
+    }
 }

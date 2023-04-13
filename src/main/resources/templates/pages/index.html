@@ -13,7 +13,7 @@
 <div th:each="drill:${drillList}">
     <table>
         <tr>
-            <th th:id="operand+${drillStat.count}" th:text="${drill.getOperand()}"
+            <th th:id="operand+${drillStat.count}" th:text="${drill.displayOperand()}"
                 th:value="${drill.getOperand()}"></th>
             <!-- Statはth:eachのデフォルトステータス変数-->
             <td><input type="text" th:id="answerInput+${drillStat.count}"/>

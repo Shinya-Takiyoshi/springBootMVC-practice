@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class HelloExpression {
 
-    public String helloText(){
+    public String helloText() {
         return "hello";
     }
 

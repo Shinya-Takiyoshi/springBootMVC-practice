@@ -1,13 +1,13 @@
 package com.springMvcPractice.domain.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Getter
 public enum Operator {
     PLUS("+"),
     MINUS("-");
 
-    private String operator;
+    private final String operator;
 }

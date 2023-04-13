@@ -14,7 +14,7 @@ import java.util.Set;
  * 参考:https://qiita.com/su-kun1899/items/af71c0e8de0426dfb8f6
  * メリット：受け渡しているjavaのオブジェクト以外で共通メソッドが呼び出しできて処理できること。
  * 複雑な処理の場合に、htmlに全て記載するよりも簡潔に見えて良い。
- * **/
+ **/
 @Component
 @RequiredArgsConstructor
 public class HelloDialect implements IExpressionObjectDialect {
@@ -23,8 +23,10 @@ public class HelloDialect implements IExpressionObjectDialect {
     private static final String HELLO_EXPRESSION_NAME = "hello";
 
     // 名前管理するSet
-    private static final Set<String> ALL_EXPRESSION_NAMES = new HashSet<String>(){
-        {add(HELLO_EXPRESSION_NAME);}
+    private static final Set<String> ALL_EXPRESSION_NAMES = new HashSet<String>() {
+        {
+            add(HELLO_EXPRESSION_NAME);
+        }
     };
 
     @Override
@@ -38,7 +40,7 @@ public class HelloDialect implements IExpressionObjectDialect {
             @Override
             public Object buildObject(IExpressionContext context, String expressionObjectName) {
                 // 独自Utilityのインスタンスと名前を紐付け
-                if(expressionObjectName.equals(HELLO_EXPRESSION_NAME)){
+                if (expressionObjectName.equals(HELLO_EXPRESSION_NAME)) {
                     return hello;
                 }
                 return null;
